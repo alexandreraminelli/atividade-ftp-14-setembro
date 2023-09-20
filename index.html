@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Visitantes</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Cadastro de usuários do Site</h1>
+    </header>
+
+    <main>
+      <form action="verifica.php" method="post">
+        <!-- Nome -->
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" size="35" maxlength="256" requiredw />
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required size="35" maxlength="256" />
+        <!-- Cidade -->
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" id="cidade" size="35" maxlength="256" />
+        <!-- Estado -->
+        <label for="estado">Estado:</label>
+        <input type="text" name="estado" id="estado" maxlength="2" />
+        <!-- Opnião -->
+        <label for="comentarios">Digite sua opnião sobre o site no espaço abaixo:</label>
+        <textarea name="comentarios" id="comentarios" cols="52" rows="5"></textarea>
+        <!-- Enviar -->
+        <input type="submit" value="Enviar" />
+      </form>
+    </main>
+  </body>
+</html>
