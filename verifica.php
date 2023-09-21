@@ -45,7 +45,7 @@
         // Verifica se houve erro
         if ($erro == 0) {
             echo "<p>Todos os dados foram digitados corretamente.</p>";
-            include 'insere.inc';
+            include 'insere.inc.php';
         }
         ?>
     </main>

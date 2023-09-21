@@ -1,5 +1,5 @@
 <?php
-include 'conecta_mysql.inc';
+include 'conecta_mysql.inc.php';
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
@@ -10,4 +10,9 @@ $comentarios = $_POST['comentarios'];
 $sql = "INSERT INTO cadastro VALUES";
 $sql .= "('$nome', '$email', '$cidade', '$estado', '$comentarios')";
 
-if ($conexao->query($sql) === TRUE) { echo "Usuário incluído com sucesso!"; } else { echo "Erro: " . $sql . "<br />" . $conexao->error; } $conexao->close();
+if ($conexao->query($sql) === TRUE) {
+    echo "Usuário incluído com sucesso!";
+} else {
+    echo "Erro: " . $sql . "<br />" . $conexao->error;
+}
+$conexao->close();
