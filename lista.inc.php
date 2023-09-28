@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar dados do banco</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    table {
+        margin-bottom: 50px;
+    }
+    </style>
 </head>
 
 <body>
@@ -20,25 +36,29 @@
         ?>
         <h2>Cadastro de usuários do estado de SP</h2>
         <table>
-            <tr>
-                <td>Nome</td>
-                <td>E-mail</td>
-                <td>Cidade</td>
-                <td>Comentário</td>
-            </tr>
-            <?php
-            //Enquanto houver dados na tabela para serem mostrados, execute o que está dentro do while
-            while ($mostrar = mysqli_fetch_array($res)) {
-                echo "<tr>
-            <td>" . $mostrar['nome'] . "</td>
-            <td>" . $mostrar['email'] . "</td>
-            <td>" . $mostrar['cidade'] . "</td>
-            <td>" . $mostrar['comentario'] . "</td>
-            <td> <a href='apagar.php?a=" . $mostrar['nome'] . "'>apagar</a></td>
-                <td> <a href='alterar.php?a=" . $mostrar['nome'] . "'>editar</a></td>
-            </tr>";
-            }
-            ?>
+            <thead>
+                <tr>
+                    <td>Nome</td>
+                    <td>E-mail</td>
+                    <td>Cidade</td>
+                    <td>Comentário</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                //Enquanto houver dados na tabela para serem mostrados, execute o que está dentro do while
+                while ($mostrar = mysqli_fetch_array($res)) {
+                    echo "<tr>
+                <td>" . $mostrar['nome'] . "</td>
+                <td>" . $mostrar['email'] . "</td>
+                <td>" . $mostrar['cidade'] . "</td>
+                <td>" . $mostrar['comentario'] . "</td>
+                <td> <a href='apagar.php?a=" . $mostrar['nome'] . "'>apagar</a></td>
+                    <td> <a href='alterar.php?a=" . $mostrar['nome'] . "'>editar</a></td>
+                </tr>";
+                }
+                ?>
+            </tbody>
         </table>
 
         <?php
