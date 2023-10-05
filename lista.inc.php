@@ -54,7 +54,7 @@
                 <td>" . $mostrar['cidade'] . "</td>
                 <td>" . $mostrar['comentario'] . "</td>
                 <td> <a href='apagar.php?a=" . $mostrar['nome'] . "'>apagar</a></td>
-                    <td> <a href='alterar.php?a=" . $mostrar['nome'] . "'>editar</a></td>
+                    <td> <a href='editar.php?a=" . $mostrar['nome'] . "'>editar</a></td>
                 </tr>";
                 }
                 ?>
